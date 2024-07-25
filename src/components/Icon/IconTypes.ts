@@ -1,6 +1,9 @@
-export enum IconNames {
-    menu = "menu",
-    search = "search",
+import { downArrow, search, upArrow } from './IconRegistry';
+
+export const IconNames = {
+    "search": search,
+    "up-arrow": upArrow,
+    "down-arrow": downArrow
 }
   
 export enum IconColors { 
