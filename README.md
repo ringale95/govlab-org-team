@@ -13,6 +13,11 @@ npm create vite@latest govlab-team-page --template react-ts && cd govlab-team-pa
 
 ## Run Commands
 
+**Clone Repository:**
+```
+git clone https://github.com/ringale95/govlab-org-team.git 
+```
+
 **Install dependencies:**
   ```bash
   npm install
