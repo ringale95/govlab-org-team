@@ -28,9 +28,13 @@ npm create vite@latest govlab-team-page --template react-ts && cd govlab-team-pa
   npm run build
   ```
 
+Here’s an updated version of your README that incorporates the additional information about the `components` and `container` folders:
+
+---
+
 ## Styling Foundations
 
-Global styles are used to create a pseudo framework for building reusable components. The `css` folder at the root level contains:
+Global styles are used to create a pseudo-framework for building reusable components. The `css` folder at the root level contains:
 
 - [`fonts`](./src/css/fonts/index.css)
 - [`colors`](./src/css/colors/index.css)
@@ -42,3 +46,21 @@ For this project, we've chosen [Proxima Nova](https://online-fonts.com/fonts/pro
 ### Color Palette
 
 This stylesheet highlights the various colors that would be used throughout this website. Each color is defined as a custom CSS variable and is used to maintain a consistent look and feel across the website.
+
+### Components and Containers
+
+In addition to global styles, specific styles for individual components and containers are maintained in separate folders:
+
+- **`components` Folder:** Contains CSS files for all the individual React components developed for this app, such as:
+  - `header`
+  - `copyright`
+  - `avatar`
+  - `dropdown`
+  - `project-item`
+  - `team-member`
+  - `footer`
+
+- **`containers` Folder:** Includes styles specific to the layout and structure of various containers used throughout the application.
+
+By organizing styles in this manner, we ensure a modular and maintainable approach to styling, with clear separation between global styles and component-specific styles.
+

@@ -1,11 +1,13 @@
-@import "./fonts/index.css";
-@import "./colors/index.css";
-@import "./container/index.css";
-@import "./components/index.css";
+/* Importing external CSS files */
+@import './fonts/index.css';
+@import './colors/index.css';
+@import './container/index.css';
+@import './components/index.css';
 
+/* Global Styles */
 body {
     display: block;
-    margin: 0px;
+    margin: 0;
 }
 
 * {
@@ -22,13 +24,10 @@ main {
     flex: 1;
 }
 
-
+/* Loading Container Styles */
 .loading-container {
     display: flex;
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
     height: 100vh;
-    /* Full viewport height */
 }

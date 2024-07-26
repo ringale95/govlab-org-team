@@ -1,0 +1,23 @@
+/* Footer section styles */
+.footer-container .footer-section {
+    flex: 1;
+}
+
+/* Remove margin-right for every third footer section */
+.footer-container .footer-section:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* Footer section styles for larger screens */
+@media (min-width: 1025px) {
+    .footer-container .footer-section {
+        margin-right: 60px;
+    }
+}
+
+/* Footer section styles for smaller screens */
+@media (max-width: 800px) {
+    .footer-container .footer-section {
+        text-align: center;
+    }
+}
