@@ -1,17 +1,20 @@
-.b-copyright {
+/* Copyright section container styles */
+.copyright-container {
     background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
     padding: 20px;
 }
 
+/* Copyright section container styles for larger screens */
 @media (min-width: 1025px) {
-    .b-copyright {
+    .copyright-container {
         padding: 20px;
         text-align: left;
     }
 }
 
-.b-copyright .e-wrap {
+/* Wrapper inside the copyright section */
+.copyright-wrapper {
     max-width: 1025px;
     margin-left: auto;
     margin-right: auto;
@@ -19,32 +22,36 @@
     font-size: 14px;
 }
 
-.b-copyright .e-wrap .e-cc-badge {
+/* Creative Commons badge styles */
+.cc-badge {
     margin-right: 25px;
     margin-top: 5px;
 }
 
+/* Center the CC badge on smaller screens */
 @media (max-width: 800px) {
-    .b-copyright .e-wrap .e-cc-badge {
+    .cc-badge {
         display: block;
         margin: 0 auto;
-        /* Center the badge on smaller screens */
     }
 }
 
+/* Float the CC badge to the left on larger screens */
 @media (min-width: 1025px) {
-    .b-copyright .e-wrap .e-cc-badge {
+    .cc-badge {
         float: left;
     }
 }
 
-.b-copyright .e-wrap a {
+/* Link styles inside the copyright section */
+.copyright-wrapper a {
     margin: 0;
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
 }
 
-.b-copyright .e-wrap a:hover {
+/* Link hover effects */
+.copyright-wrapper a:hover {
     color: white;
 }
