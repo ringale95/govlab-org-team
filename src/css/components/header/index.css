@@ -1,0 +1,17 @@
+.header-container {
+    background-color: var(--gvl-bg-color-primary);
+    padding: 10px;
+    display: flex;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    justify-items: center;
+}
+
+.header-nav-group,
+.header-nav-search-group {
+    display: flex;
+    width: 30%;
+    cursor: pointer;
+
+}

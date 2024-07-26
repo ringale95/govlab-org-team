@@ -1,10 +1,10 @@
 import "./css/index.css";
-import { Text } from "./components/Text/Text";
-import { Dropdown } from "./components/Dropdown/Dropdown";
 import TeamService from "./services/TeamService";
 import { TeamMember } from "./models/TeamMember";
 import { useEffect, useState } from "react";
 import _ from "lodash";
+import TeamMemberCard from "./components/TeamMemberCard/TeamMemberCard";
+import Header from "./components/Header/Header";
 
 function App() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
@@ -14,12 +14,30 @@ function App() {
   const loadTeamMembers = async () => {
     try {
       const members = await TeamService.getTeamMembers();
-      setTeamMembers(members);
+      setTeamMembers(customSort(members));
     } catch (err) {
       setError("Failed to fetch team members.");
     } finally {
       setLoading(false);
     }
+  };
+
+  const customSort = (members: TeamMember[]): TeamMember[] => {
+    return members.sort((a, b) => {
+      const specialNames = ["BETH SIMONE NOVECK", "STEFAAN VERHULST"];
+      if (
+        specialNames.includes(_.upperCase(a.name)) &&
+        specialNames.includes(_.upperCase(b.name))
+      ) {
+        return (
+          specialNames.indexOf(_.upperCase(a.name)) -
+          specialNames.indexOf(_.upperCase(b.name))
+        );
+      }
+      if (specialNames.includes(_.upperCase(a.name))) return -1;
+      if (specialNames.includes(_.upperCase(b.name))) return 1;
+      return a.name.localeCompare(b.name);
+    });
   };
 
   useEffect(() => {
@@ -31,20 +49,9 @@ function App() {
 
   return (
     <>
+      <Header />
       {teamMembers.map((member) => (
-        <div key={member.id}>
-          <Text variant="bold" as="h3" color="text-primary">
-            {_.upperCase(member.name)}
-          </Text>
-          <Text variant="regular" as="h4" color="text-secondary">
-            {_.upperCase(member.title)}
-          </Text>
-          <Text variant="light" as="p" color="text-primary">
-            {member.bio_short}
-          </Text>
-          <Dropdown>MORE</Dropdown>
-          <Dropdown>PROJECTS</Dropdown>
-        </div>
+        <TeamMemberCard {...member} />
       ))}
     </>
   );

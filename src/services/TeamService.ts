@@ -1,6 +1,7 @@
 import axios from "axios";
 import { TeamMember } from "../models/TeamMember";
 
+// Creating axios instance for fetching data
 class TeamService {
     private http = axios.create({
         baseURL: 'https://content.thegovlab.com'
@@ -20,8 +21,9 @@ class TeamService {
                     }
                 }
             );
-
-            return response.data.data; // Ensure this matches the API response structure
+            const result = response.data.data.filter(member => (member.status === 'published' && member.slug !== "govlab"));
+            console.log(result.length);
+            return result; // Ensure this matches the API response structure
         } catch (error) {
             console.error('Error fetching team members:', error);
             throw error;

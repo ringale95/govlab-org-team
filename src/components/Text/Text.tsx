@@ -14,6 +14,7 @@ interface TextProps {
   variant: TextVariant;
   as: TextType;
   color: TextColor;
+  href?: string;
 }
 
 /**
@@ -24,6 +25,7 @@ interface TextProps {
 export const Text = ({
   variant,
   as,
+  href,
   color,
   children,
 }: PropsWithChildren<TextProps>) => {
@@ -31,6 +33,8 @@ export const Text = ({
   const fontWeight = TextVariants[variant];
   const textColor = color ? TextColors[color] : "var(--black-color)";
   return (
-    <Component style={{ fontWeight, color: textColor }}>{children}</Component>
+    <Component href={href} style={{ fontWeight, color: textColor }}>
+      {children}
+    </Component>
   );
 };

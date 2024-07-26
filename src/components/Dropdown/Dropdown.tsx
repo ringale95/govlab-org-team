@@ -2,10 +2,16 @@ import { PropsWithChildren, useState } from "react";
 import { Text } from "../Text/Text";
 import { Icon } from "../Icon/Icon";
 
+/**
+ * Defines shape of Dropdown component props.
+ */
 interface DropdownProps {
   handleClick?: (e: unknown) => void;
 }
 
+/**
+ * Resuable Dropdown component with child and handleClick as props
+ */
 export const Dropdown = ({
   handleClick,
   children,
