@@ -17,6 +17,7 @@ export type TextVariant = keyof typeof TextVariants;
    */
 export type TextType =
     | "p"
+    | "a"
     | "span"
     | "h1"
     | "h2"

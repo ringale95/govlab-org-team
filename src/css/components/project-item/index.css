@@ -1,0 +1,8 @@
+.project-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-item:hover {
+    background-color: rgba(var(--black-rgb), 0.05);
+}

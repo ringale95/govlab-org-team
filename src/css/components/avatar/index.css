@@ -1,0 +1,12 @@
+.avatar__img--xl {
+    z-index: 0;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    margin: 20px 50px;
+}
