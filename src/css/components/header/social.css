@@ -1,0 +1,18 @@
+/* Styling for site button */
+.header-site-button {
+    color: var(--gvl-link-primary);
+    background-color: rgba(var(--white-rgb), 0.2);
+    padding: 5px;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+/* Styling for social links */
+.nav-social-link {
+    color: white;
+}
+
+.nav-social-link img {
+    padding: 10px 15px;
+    /* Styling for social link icons */
+}

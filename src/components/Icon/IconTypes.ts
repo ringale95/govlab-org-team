@@ -1,4 +1,4 @@
-import { downArrow, search, upArrow, menu, twitter, youtube} from './IconRegistry';
+import { downArrow, search, upArrow, menu, twitter, youtube, logo} from './IconRegistry';
 
 
 /**
@@ -10,7 +10,8 @@ export const IconNames = {
     "down-arrow": downArrow,
     "menu": menu,
     "twitter": twitter,
-    "youtube": youtube
+    "youtube": youtube,
+    "logo": logo
 }
   
 /**
@@ -29,6 +30,7 @@ export enum IconColors {
 export enum IconSizes {
     sm = '18px',
     md = '24px',
+    xl = "48px"
 }
   
 /**

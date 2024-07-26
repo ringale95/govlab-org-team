@@ -1,0 +1,9 @@
+/* Container for the logo, adjust spacing as needed */
+.header-logo {
+    margin-right: 12%;
+}
+
+.header-logo img {
+    max-width: 140px;
+    /* Logo image styling */
+}

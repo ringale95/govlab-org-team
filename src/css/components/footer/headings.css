@@ -1,0 +1,7 @@
+/* Header styles inside footer sections */
+.footer-container .footer-section h4 {
+    margin: 40px 0 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}

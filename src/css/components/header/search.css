@@ -1,0 +1,37 @@
+/* Container for the search form elements */
+.header-search-form {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Search input styling */
+.header-search-input {
+    opacity: 1;
+    transition: all 0.4s ease;
+    padding: 4px 6px;
+    flex: 1;
+    margin-left: 10px;
+    max-height: 30px;
+    outline: none;
+    border: 0;
+    color: white;
+    background-color: rgba(var(--white-rgb), 0.1);
+}
+
+/* Focus state styling for search input */
+.header-search-input:focus {
+    background-color: rgba(var(--white-rgb), 0.3);
+}
+
+/* Search submit button styling */
+.header-search-submit {
+    cursor: pointer;
+    background-color: rgba(var(--white-rgb), 0.2);
+    border: 0;
+    color: var(--gvl-link-primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 4px 12px;
+}

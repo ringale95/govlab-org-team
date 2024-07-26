@@ -1,0 +1,57 @@
+/* Copyright section container styles */
+.copyright-container {
+    background-color: rgba(var(--black-rgb), 0.9);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Copyright section container styles for larger screens */
+@media (min-width: 1025px) {
+    .copyright-container {
+        padding: 20px;
+        text-align: left;
+    }
+}
+
+/* Wrapper inside the copyright section */
+.copyright-wrapper {
+    max-width: 1025px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gvl-link-primary);
+    font-size: 14px;
+}
+
+/* Creative Commons badge styles */
+.cc-badge {
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+/* Center the CC badge on smaller screens */
+@media (max-width: 800px) {
+    .cc-badge {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Float the CC badge to the left on larger screens */
+@media (min-width: 1025px) {
+    .cc-badge {
+        float: left;
+    }
+}
+
+/* Link styles inside the copyright section */
+.copyright-wrapper a {
+    margin: 0;
+    line-height: 1.2;
+    color: var(--gvl-link-primary);
+    text-decoration: none;
+}
+
+/* Link hover effects */
+.copyright-wrapper a:hover {
+    color: white;
+}

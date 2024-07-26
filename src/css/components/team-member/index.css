@@ -1,33 +1,65 @@
+/* Styles for the Team Member Card */
 .team-member-card {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     min-height: 300px;
     max-width: 70%;
-    margin: 0px;
+    margin: 0px auto;
     height: auto;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
     position: relative;
     z-index: 1;
 }
 
-.team-member-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
+/* Styles for the Avatar within the Team Member Card */
 .team-member-avatar {
-    position: sticky;
     margin: 20px 50px;
 }
 
+/* Styles for the Information Section within the Team Member Card */
 .team-member-info {
+    display: flex;
+    flex-direction: column;
     margin: 20px;
+}
+
+/* Styles for the Buttons within the Team Member Card */
+.team-member-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.team-member-container {
+    border-bottom: 1px solid rgba(var(--black-rgb), 0.1);
+}
+
+/* Responsive Styles for Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+    .team-member-card {
+        flex-direction: column;
+    }
+
+    .team-member-avatar {
+        align-self: center;
+    }
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 800px) {
+    .team-member-card {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .team-member-avatar {
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    .team-member-buttons {
+        flex-direction: row;
+    }
 }

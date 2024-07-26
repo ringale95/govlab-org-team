@@ -1,16 +1,5 @@
-.header-container {
-    background-color: var(--gvl-bg-color-primary);
-    padding: 10px;
-    display: flex;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    justify-items: center;
-}
-
-.header-group {
-    display: flex;
-    width: 30%;
-    cursor: pointer;
-
-}
+@import './container.css';
+@import './logo.css';
+@import './search.css';
+@import './navigation.css';
+@import './social.css';
