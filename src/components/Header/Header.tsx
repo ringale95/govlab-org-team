@@ -2,10 +2,29 @@ import { MouseEventHandler } from "react";
 import { Icon } from "../Icon/Icon";
 
 interface HeaderProps {
+  /**
+   * Indicates whether the menu is currently active or not.
+   * @type {boolean}
+   */
   menuActive: boolean;
+
+  /**
+   * Function to toggle the menu state when the menu button is clicked.
+   * @param {React.MouseEventHandler<HTMLDivElement>} event - The click event handler for toggling the menu.
+   * @type {MouseEventHandler<HTMLDivElement>}
+   */
   toggleMenu: MouseEventHandler<HTMLDivElement>;
 }
 
+/**
+ * Renders the header component with a navigation trigger, logo, and navigation links.
+ * Includes a menu toggle button and a search form.
+ *
+ * @param {HeaderProps} props - The properties for the header component.
+ * @param {boolean} props.menuActive - Indicates if the menu is active.
+ * @param {MouseEventHandler<HTMLDivElement>} props.toggleMenu - Click event handler to toggle the menu.
+ * @returns {JSX.Element} - The JSX for the header component.
+ */
 const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
   return (
     <>
