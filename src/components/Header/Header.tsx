@@ -10,11 +10,8 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
   return (
     <>
       <header className="gvl-header">
-        <div className="gvl-header-group">
-          <div
-            className="e-nav-item js-nav-trigger e-nav-trigger"
-            onClick={toggleMenu}
-          >
+        <div className="header-nav-trigger">
+          <div className="nav-trigger-button" onClick={toggleMenu}>
             <Icon
               name="menu"
               size="md"
@@ -22,22 +19,22 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
               sx={{ padding: "10px 15px" }}
             />
           </div>
-          <div className="gvl-header-search-form gvl-header-search-trigger">
+          <div className="header-search-form">
             <Icon
               name="search"
               size="md"
               color="nav-icon-primary"
               sx={{ padding: "10px 15px" }}
             />
-            <input className="gvl-header-search-input" type="text" />
+            <input className="header-search-input" type="text" />
             <input
-              className="gvl-header-search-submit"
+              className="header-search-submit"
               type="submit"
               value="Search"
             />
           </div>
         </div>
-        <div className="gvl-header-logo logo">
+        <div className="header-logo">
           <a href="./">
             <img
               src="src/assets/images/govlablogo1x/the-govlab-logo-white.png"
@@ -45,13 +42,13 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
             />
           </a>
         </div>
-        <div className="gvl-header-group">
-          <a className="gvl-header-site-button" href="/our-sites">
+        <div className="header-nav-links">
+          <a className="header-site-button" href="/our-sites">
             OUR SITES
           </a>
           <a
             href="https://twitter.com/TheGovLab"
-            className="gvl-header-nav-item"
+            className="nav-social-link"
             target="_blank"
           >
             <Icon
@@ -63,7 +60,7 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
           </a>
           <a
             href="https://www.youtube.com/user/TheGovLab"
-            className="gvl-header-nav-item"
+            className="nav-social-link"
             target="_blank"
           >
             <Icon
@@ -75,7 +72,7 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
           </a>
         </div>
       </header>
-      <nav className={`b-main-menu ${menuActive ? "m-active" : ""}`}>
+      <nav className={`main-menu ${menuActive ? "menu-active" : ""}`}>
         <a href="./">Home</a>
         <a href="/about">About</a>
         <a href="/projects">Projects</a>
