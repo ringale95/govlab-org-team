@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./css/index.css";
+import TeamService from "./services/TeamService";
+import { TeamMember } from "./models/TeamMember";
+import { useEffect, useState } from "react";
+import _ from "lodash";
+import TeamMemberCard from "./components/TeamMemberCard/TeamMemberCard";
+import Header from "./components/Header/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const loadTeamMembers = async () => {
+    try {
+      const members = await TeamService.getTeamMembers();
+      setTeamMembers(customSort(members));
+    } catch (err) {
+      setError("Failed to fetch team members.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const customSort = (members: TeamMember[]): TeamMember[] => {
+    return members.sort((a, b) => {
+      const specialNames = ["BETH SIMONE NOVECK", "STEFAAN VERHULST"];
+      if (
+        specialNames.includes(_.upperCase(a.name)) &&
+        specialNames.includes(_.upperCase(b.name))
+      ) {
+        return (
+          specialNames.indexOf(_.upperCase(a.name)) -
+          specialNames.indexOf(_.upperCase(b.name))
+        );
+      }
+      if (specialNames.includes(_.upperCase(a.name))) return -1;
+      if (specialNames.includes(_.upperCase(b.name))) return 1;
+      return a.name.localeCompare(b.name);
+    });
+  };
+
+  useEffect(() => {
+    loadTeamMembers();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className="team-member-container">
+        {teamMembers.map((member) => (
+          <TeamMemberCard {...member} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

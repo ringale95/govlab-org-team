@@ -1,0 +1,13 @@
+@import "./fonts/index.css";
+@import "./colors/index.css";
+@import "./container/index.css";
+@import "./components/index.css";
+
+body {
+    display: block;
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}

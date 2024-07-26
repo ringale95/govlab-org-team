@@ -1,0 +1,33 @@
+/*
+ * Download URL for Proxima Nova - https://online-fonts.com/fonts/proxima-nova
+ * Currently, only `Proxima Nova Regular` sufficient.
+*/
+@font-face {
+    font-family: 'proxima-nova';
+    src:
+        url('./Proxima Nova/proximanova_regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+:root {
+    font-family: 'proxima-nova', 'sans-serif';
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}

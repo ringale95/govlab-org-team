@@ -1,0 +1,45 @@
+/*
+    Global Color Palette CSS Variable Definitions
+    1. Background Color
+        a. Primary 
+    2. Text
+        a. Primary
+        b. Secondary
+        c. Tertiary
+    3. Links
+        a. Primary
+    4. Navbar
+        a. Primary
+*/
+
+:root {
+    /* Base RGB values */
+    --black-rgb: 0, 0, 0;
+    --white-rgb: 255, 255, 255;
+
+    /* Base Color values */
+    --black-color: rbg(var(--black-rgb));
+    --white-color: rbg(var(--white-rgb));
+
+    /* Base RGB values for Background, Text, Icons */
+    --gvl-bg-color-base-rgb: 82, 48, 128;
+    --gvl-text-base-rgb: var(--black-rgb);
+    --gvl-icons-base-rgb: var(--white-rgb);
+
+    /* Define Color Palette using Base Colors */
+    /* Background Color Shades */
+    --gvl-bg-color-primary: rgba(var(--gvl-bg-color-base-rgb), 1);
+    --gvl-bg-color-secondary: rgba(var(--black-rgb), 0.8);
+    --gvl-bg-color-tertiary: rgba(var(--black-rgb), 0.9);
+
+    /* Text Color Shades */
+    --gvl-text-primary: rgba(var(--gvl-text-base-rgb), 0.8);
+    --gvl-text-secondary: rgba(var(--gvl-text-base-rgb), 0.5);
+    --gvl-text-tertiary: rgba(var(--gvl-bg-color-base-rgb), 1);
+
+    /* Link Color Shades */
+    --gvl-link-primary: rgba(var(--white-rgb), 0.7);
+
+    /* Navbar Color Shades */
+    --gvl-nav-primary: rgba(51, 51, 51, 1);
+}
