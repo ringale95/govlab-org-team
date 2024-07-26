@@ -64,3 +64,21 @@ In addition to global styles, specific styles for individual components and cont
 
 By organizing styles in this manner, we ensure a modular and maintainable approach to styling, with clear separation between global styles and component-specific styles.
 
+Here’s how you can include the updated information about the components in your README:
+
+---
+
+## Reusable Components
+
+While recreating the team members page, several key visual components were identified, including Avatar, Text, Icon, Dropdown, and TeamCard. To streamline development and ensure consistency across the website, these components were implemented as reusable, standalone elements with dynamic inputs. This approach enhances maintainability and facilitates the integration of these components throughout the site.
+
+- **Avatar Component:** The `Avatar` component is a reusable element for displaying profile images, with customizable size and optional inline styles. It takes a URL for the image and an `AvatarType` to adjust its size, defaulting to a placeholder image if none is provided.
+
+- **Icon Component:** The `Icon` component is a reusable element that allows for customizable icons with dynamic properties such as name, size, color, and optional hover effects.
+
+- **Dropdown Component:** The `Dropdown` component is a reusable element that toggles visibility to display its children and optionally handles click events.
+
+- **Text Component:** The `Text` component is a versatile and reusable element that supports different variants, HTML tags, colors, and optional links.
+
+Additionally, JSDoc comments have been integrated across all React components wherever possible, enhancing IntelliSense and improving the overall development experience.
+
