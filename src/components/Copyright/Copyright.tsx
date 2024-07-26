@@ -1,9 +1,13 @@
+/**
+ * Copyright component that displays a Creative Commons license badge and license information.
+ * @returns {JSX.Element} The rendered Copyright component.
+ */
 export const Copyright = () => {
   return (
-    <div className="b-copyright">
-      <div className="e-wrap">
+    <div className="copyright-container">
+      <div className="copyright-wrapper">
         <a
-          className="e-cc-badge"
+          className="cc-badge"
           rel="license"
           href="http://creativecommons.org/licenses/by-sa/4.0/"
         >

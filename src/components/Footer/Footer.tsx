@@ -1,12 +1,16 @@
 import React from "react";
 import { Copyright } from "../Copyright/Copyright";
 
+/**
+ * Footer component that renders the footer section of the website.
+ * @returns {JSX.Element} The rendered footer component.
+ */
 export const Footer = () => {
   return (
     <>
-      <footer className="b-footer">
-        <div className="e-wrap">
-          <div className="e-content m-sections">
+      <footer className="footer-container">
+        <div className="footer-wrapper">
+          <div className="footer-section footer-links">
             <h4>Sections</h4>
             <a href="./">Home</a>
             <a href="/about">About</a>
@@ -20,21 +24,23 @@ export const Footer = () => {
             <a href="/contact">Contact</a>
             <a href="/brand">Brand Assets</a>
           </div>
-          <div className="e-content">
+          <div className="footer-section">
             <a
-              className="e-our-funders"
+              className="footer-funders"
               href="/our-transparency"
               target="_blank"
+              rel="noopener noreferrer"
             >
               OUR FUNDERS
             </a>
           </div>
-          <div className="e-content">
+          <div className="footer-section">
             <h4>Affiliated With</h4>
             <a
-              className="e-partner-logo burnes-logo"
+              className="footer-partner-logo partner-logo-burnes"
               href="http://northeastern.edu"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="src/assets/images/neu.png"
@@ -43,9 +49,10 @@ export const Footer = () => {
             </a>
             <h4>Founded At</h4>
             <a
-              className="e-partner-logo"
+              className="footer-partner-logo"
               href="http://engineering.nyu.edu/tandon"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="src/assets/images/nyu.png"

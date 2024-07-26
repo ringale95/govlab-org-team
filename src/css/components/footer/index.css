@@ -1,4 +1,5 @@
-.b-footer {
+/* Footer container styles */
+.footer-container {
     background-color: rgba(0, 0, 0, 0.8);
     color: rgba(255, 255, 255, 0.8);
     padding-top: 1px;
@@ -6,12 +7,13 @@
     font-size: 16px;
 }
 
+/* Footer container styles for larger screens */
 @media (min-width: 1025px) {
-    .b-footer {
+    .footer-container {
         padding: 45px 0;
     }
 
-    .b-footer .e-wrap {
+    .footer-container .footer-wrapper {
         max-width: 1025px;
         margin-left: auto;
         margin-right: auto;
@@ -19,43 +21,51 @@
     }
 }
 
-.b-footer .e-content {
+/* Footer section styles */
+.footer-container .footer-section {
     flex: 1;
 }
 
-.b-footer .e-content:nth-child(3n) {
+/* Remove margin-right for every third footer section */
+.footer-container .footer-section:nth-child(3n) {
     margin-right: 0;
 }
 
+/* Footer section styles for larger screens */
 @media (min-width: 1025px) {
-    .b-footer .e-content {
+    .footer-container .footer-section {
         margin-right: 60px;
     }
 }
 
+/* Footer section styles for smaller screens */
 @media (max-width: 800px) {
-    .b-footer .e-content {
+    .footer-container .footer-section {
         text-align: center;
     }
 }
 
-.b-footer .e-content h4 {
+/* Header styles inside footer sections */
+.footer-container .footer-section h4 {
     margin: 40px 0 0;
     font-weight: 600;
     text-transform: uppercase;
     color: white;
 }
 
-.b-footer .e-content .e-partner-logo {
+/* Styles for partner logos inside footer sections */
+.footer-container .footer-section .footer-partner-logo {
     display: block;
 }
 
-.e-our-funders {
+/* Funders link styles */
+.footer-funders {
     text-align: center;
     margin-top: 40px;
 }
 
-.e-content a.e-our-funders {
+/* Funders link styles inside footer sections */
+.footer-section a.footer-funders {
     font-size: 1.1rem;
     background-color: #ffffff18;
     color: white;
@@ -63,12 +73,14 @@
     display: block;
 }
 
-.e-content a.e-our-funders:hover {
+/* Funders link hover effects */
+.footer-section a.footer-funders:hover {
     background-color: #ffffff2f;
     transition: 0.3s ease-in-out;
 }
 
-.b-footer .e-content .e-partner-logo>img {
+/* Partner logo image styles */
+.footer-container .footer-section .footer-partner-logo>img {
     max-width: 90%;
     padding: 10px 0;
     max-height: 60px;
@@ -76,16 +88,19 @@
     transition: all 0.4s ease;
 }
 
-.b-footer .e-content .e-partner-logo>img:hover {
+/* Partner logo image hover effects */
+.footer-container .footer-section .footer-partner-logo>img:hover {
     opacity: 1;
     transition: all 0.4s ease;
 }
 
-.b-footer .e-content .e-partner-logo.burnes-logo img {
+/* Specific styles for Burnes partner logo */
+.footer-container .footer-section .footer-partner-logo.partner-logo-burnes img {
     max-height: 90px;
 }
 
-.b-footer .e-content.m-sections a {
+/* Footer links styles */
+.footer-container .footer-section.footer-links a {
     display: block;
     box-sizing: border-box;
     color: rgba(255, 255, 255, 0.7);
@@ -96,29 +111,24 @@
     transition: all 0.4s ease;
 }
 
+/* Footer links styles for larger screens */
 @media (min-width: 1025px) {
-    .b-footer .e-content.m-sections a {
+    .footer-container .footer-section.footer-links a {
         display: inline-block;
         width: 49%;
     }
 }
 
-.b-footer .e-content.m-sections a:hover {
+/* Footer links hover effects */
+.footer-container .footer-section.footer-links a:hover {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
 }
 
+/* Padding adjustment for smaller screens */
 @media (max-width: 800px) {
-
-    .b-landing-questions,
-    .b-featured-content>*,
-    .b-single-landing>*,
-    .b-single-description>*,
-    .b-single-results>*,
-    .b-single-related-content>*,
-    .b-projects-landing>*,
-    .b-footer {
+    .footer-container {
         padding-left: 10px;
         padding-right: 10px;
     }
