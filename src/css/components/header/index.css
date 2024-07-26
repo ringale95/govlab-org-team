@@ -15,14 +15,14 @@
 .gvl-header-search-form {
     display: flex;
     align-items: center;
+
 }
 
 .gvl-header-logo {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    /* Ensure logo is above search input and button */
-    align-items: center;
-    /* Center the logo */
+    align-items: center; */
+    margin-right: 12%;
 }
 
 .gvl-header-logo .logo {
@@ -121,7 +121,6 @@ textarea {
 
     .gvl-header-group a {
         display: none;
-        /* Hide navigation links */
     }
 
     .gvl-header-logo {
@@ -135,14 +134,12 @@ textarea {
     .gvl-header-search-form {
         display: flex;
         flex-direction: row;
-        /* Ensure search icon and inputs are in a row */
         align-items: center;
         width: 100%;
     }
 
     .gvl-header-search-input {
         width: calc(100% - 60px);
-        /* Adjust width based on space for the search icon */
         margin-left: 0;
     }
 
@@ -152,7 +149,7 @@ textarea {
 }
 
 .gvl-header .logo img {
-    max-width: 100px;
+    max-width: 140px;
 }
 
 @media (min-width: 1025px) {
