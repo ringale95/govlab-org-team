@@ -1,0 +1,125 @@
+.b-footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 1px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+@media (min-width: 1025px) {
+    .b-footer {
+        padding: 45px 0;
+    }
+
+    .b-footer .e-wrap {
+        max-width: 1025px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+}
+
+.b-footer .e-content {
+    flex: 1;
+}
+
+.b-footer .e-content:nth-child(3n) {
+    margin-right: 0;
+}
+
+@media (min-width: 1025px) {
+    .b-footer .e-content {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    .b-footer .e-content {
+        text-align: center;
+    }
+}
+
+.b-footer .e-content h4 {
+    margin: 40px 0 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.b-footer .e-content .e-partner-logo {
+    display: block;
+}
+
+.e-our-funders {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.e-content a.e-our-funders {
+    font-size: 1.1rem;
+    background-color: #ffffff18;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.e-content a.e-our-funders:hover {
+    background-color: #ffffff2f;
+    transition: 0.3s ease-in-out;
+}
+
+.b-footer .e-content .e-partner-logo>img {
+    max-width: 90%;
+    padding: 10px 0;
+    max-height: 60px;
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.b-footer .e-content .e-partner-logo>img:hover {
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.b-footer .e-content .e-partner-logo.burnes-logo img {
+    max-height: 90px;
+}
+
+.b-footer .e-content.m-sections a {
+    display: block;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: -10px;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+}
+
+@media (min-width: 1025px) {
+    .b-footer .e-content.m-sections a {
+        display: inline-block;
+        width: 49%;
+    }
+}
+
+.b-footer .e-content.m-sections a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+@media (max-width: 800px) {
+
+    .b-landing-questions,
+    .b-featured-content>*,
+    .b-single-landing>*,
+    .b-single-description>*,
+    .b-single-results>*,
+    .b-single-related-content>*,
+    .b-projects-landing>*,
+    .b-footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

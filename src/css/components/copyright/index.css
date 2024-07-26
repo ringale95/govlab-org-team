@@ -1,0 +1,50 @@
+.b-copyright {
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 1025px) {
+    .b-copyright {
+        padding: 20px;
+        text-align: left;
+    }
+}
+
+.b-copyright .e-wrap {
+    max-width: 1025px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.b-copyright .e-wrap .e-cc-badge {
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+@media (max-width: 800px) {
+    .b-copyright .e-wrap .e-cc-badge {
+        display: block;
+        margin: 0 auto;
+        /* Center the badge on smaller screens */
+    }
+}
+
+@media (min-width: 1025px) {
+    .b-copyright .e-wrap .e-cc-badge {
+        float: left;
+    }
+}
+
+.b-copyright .e-wrap a {
+    margin: 0;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.b-copyright .e-wrap a:hover {
+    color: white;
+}
