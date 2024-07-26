@@ -1,4 +1,4 @@
-import { downArrow, search, upArrow, menu} from './IconRegistry';
+import { downArrow, search, upArrow, menu, twitter, youtube} from './IconRegistry';
 
 
 /**
@@ -8,7 +8,9 @@ export const IconNames = {
     "search": search,
     "up-arrow": upArrow,
     "down-arrow": downArrow,
-    "menu": menu
+    "menu": menu,
+    "twitter": twitter,
+    "youtube": youtube
 }
   
 /**
@@ -19,7 +21,6 @@ export enum IconColors {
     "icon-secondary" = `var(--white-color)`,
     "icon-tertiary" = `rgba(var(--white-rgb), 0.24)`,
     "nav-icon-primary" = `rgba(var(--white-rgb), 0.2)`,
-
 }
 
 /**

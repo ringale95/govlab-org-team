@@ -8,14 +8,14 @@ const Header = () => {
       <Icon name="search" size="md" color="icon-tertiary" />
     </header> */}
       <header className="header-container">
-        <div className="header-nav-group">
+        <div className="header-group">
           <Icon
             name="menu"
             size="md"
             color="nav-icon-primary"
             sx={{ padding: "10px 15px" }}
           />
-          <form className="header-nav-search-group" action="">
+          <form className="header-group" action="">
             <div className="e-nav-item js-search-trigger e-search-trigger">
               <Icon
                 name="search"
@@ -33,33 +33,48 @@ const Header = () => {
           </form>
         </div>
 
-        <div className="e-logo">
+        <div className="header-group">
           <a href="./">
-            <img src="static/img/the-govlab-logo-white.png" alt="" />
+            <img
+              src="src/assets/images/govlablogo1x/the-govlab-logo-white.png"
+              alt=""
+            />
           </a>
         </div>
 
-        <div className="e-social-media e-nav-group">
+        <div className="header-group">
           <a
             className="e-site-button"
+            style={{ color: "white" }}
             href="/our-sites"
-            // style="color: rgba(255,255,255,0.7); background-color: rgba(255,255,255,0.2); padding: 5px; font-size: 12pt; font-weight: 600"
           >
             OUR SITES
           </a>
           <a
             href="https://twitter.com/TheGovLab"
             className="e-nav-item"
+            style={{ color: "white" }}
             target="_blank"
           >
-            <i className="e-social-media-item fa fa-twitter"></i>
+            <Icon
+              name="twitter"
+              size="md"
+              color="nav-icon-primary"
+              sx={{ padding: "10px 15px" }}
+            />
           </a>
           <a
             href="https://www.youtube.com/user/TheGovLab"
             className="e-nav-item"
+            style={{ color: "white" }}
             target="_blank"
           >
-            <i className="e-social-media-item fa fa-youtube-play"></i>
+            <Icon
+              name="youtube"
+              size="md"
+              color="nav-icon-primary"
+              sx={{ padding: "10px 15px" }}
+            />
           </a>
         </div>
       </header>

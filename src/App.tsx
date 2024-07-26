@@ -50,9 +50,11 @@ function App() {
   return (
     <>
       <Header />
-      {teamMembers.map((member) => (
-        <TeamMemberCard {...member} />
-      ))}
+      <div className="team-member-container">
+        {teamMembers.map((member) => (
+          <TeamMemberCard {...member} />
+        ))}
+      </div>
     </>
   );
 }

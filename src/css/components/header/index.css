@@ -8,8 +8,7 @@
     justify-items: center;
 }
 
-.header-nav-group,
-.header-nav-search-group {
+.header-group {
     display: flex;
     width: 30%;
     cursor: pointer;
