@@ -1,0 +1,30 @@
+/* Footer container styles */
+.footer-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 1px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Footer container styles for larger screens */
+@media (min-width: 1025px) {
+    .footer-container {
+        padding: 45px 0;
+    }
+
+    .footer-container .footer-wrapper {
+        max-width: 1025px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+}
+
+/* Padding adjustment for smaller screens */
+@media (max-width: 800px) {
+    .footer-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

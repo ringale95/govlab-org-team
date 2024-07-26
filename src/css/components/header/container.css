@@ -1,0 +1,19 @@
+/* Header container styling */
+.gvl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--gvl-bg-color-primary);
+}
+
+/* Container for the navigation trigger (menu button) */
+.header-nav-trigger {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the menu button */
+.nav-trigger-button {
+    cursor: pointer;
+}

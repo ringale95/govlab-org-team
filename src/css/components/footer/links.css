@@ -1,0 +1,47 @@
+/* Funders link styles */
+.footer-funders {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Funders link styles inside footer sections */
+.footer-section a.footer-funders {
+    font-size: 1.1rem;
+    background-color: #ffffff18;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+/* Funders link hover effects */
+.footer-section a.footer-funders:hover {
+    background-color: #ffffff2f;
+    transition: 0.3s ease-in-out;
+}
+
+/* Footer links styles */
+.footer-container .footer-section.footer-links a {
+    display: block;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: -10px;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+}
+
+/* Footer links styles for larger screens */
+@media (min-width: 1025px) {
+    .footer-container .footer-section.footer-links a {
+        display: inline-block;
+        width: 49%;
+    }
+}
+
+/* Footer links hover effects */
+.footer-container .footer-section.footer-links a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
