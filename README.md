@@ -33,9 +33,6 @@ git clone https://github.com/ringale95/govlab-org-team.git
   npm run build
   ```
 
-Here’s an updated version of your README that incorporates the additional information about the `components` and `container` folders:
-
----
 
 ## Styling Foundations
 
