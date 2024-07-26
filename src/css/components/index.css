@@ -1,3 +1,5 @@
+/*Entry point CSS imports */
+
 @import './dropdown/index.css';
 @import './avatar/index.css';
 @import './team-member/index.css';
