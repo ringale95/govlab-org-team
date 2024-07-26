@@ -1,7 +1,6 @@
 /* Importing external CSS files */
 @import './fonts/index.css';
 @import './colors/index.css';
-@import './container/index.css';
 @import './components/index.css';
 
 /* Global Styles */

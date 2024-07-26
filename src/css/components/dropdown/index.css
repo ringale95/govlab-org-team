@@ -25,24 +25,3 @@
     margin-left: 15px;
     justify-content: center;
 }
-
-/* Responsive styles */
-@media (max-width: var(--breakpoint-sm)) {
-    .dropdown {
-        width: 100%;
-        flex-direction: column;
-        /* Stack text and icon vertically on small screens */
-    }
-}
-
-@media (min-width: var(--breakpoint-sm)) and (max-width: var(--breakpoint-md)) {
-    .dropdown {
-        width: 50%;
-    }
-}
-
-@media (min-width: var(--breakpoint-md)) {
-    .dropdown {
-        width: 25%;
-    }
-}
