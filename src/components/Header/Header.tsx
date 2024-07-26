@@ -3,57 +3,47 @@ import { Icon } from "../Icon/Icon";
 const Header = () => {
   return (
     <>
-      {/* <header className="header-container">
-      <Icon name="menu" size="md" color="icon-tertiary" />
-      <Icon name="search" size="md" color="icon-tertiary" />
-    </header> */}
-      <header className="header-container">
-        <div className="header-group">
+      <header className="gvl-header">
+        <div className="gvl-header-group">
           <Icon
             name="menu"
             size="md"
             color="nav-icon-primary"
             sx={{ padding: "10px 15px" }}
           />
-          <form className="header-group" action="">
-            <div className="e-nav-item js-search-trigger e-search-trigger">
-              <Icon
-                name="search"
-                size="md"
-                color="nav-icon-primary"
-                sx={{ padding: "10px 15px" }}
-              />
-            </div>
-            <input className="header-search" type="text" />
+          <div className="gvl-header-search-form gvl-header-search-trigger">
+            <Icon
+              name="search"
+              size="md"
+              color="nav-icon-primary"
+              sx={{ padding: "10px 15px" }}
+            />
+
+            <input className="gvl-header-search-input" type="text" />
             <input
-              className="header-search-submit"
+              className="gvl-header-search-submit"
               type="submit"
               value="Search"
             />
-          </form>
+          </div>
         </div>
 
-        <div className="header-group">
+        <div className="gvl-header-logo logo">
           <a href="./">
             <img
               src="src/assets/images/govlablogo1x/the-govlab-logo-white.png"
-              alt=""
+              alt="The GovLab Logo"
             />
           </a>
         </div>
 
-        <div className="header-group">
-          <a
-            className="e-site-button"
-            style={{ color: "white" }}
-            href="/our-sites"
-          >
+        <div className="gvl-header-group">
+          <a className="gvl-header-site-button" href="/our-sites">
             OUR SITES
           </a>
           <a
             href="https://twitter.com/TheGovLab"
-            className="e-nav-item"
-            style={{ color: "white" }}
+            className="gvl-header-nav-item"
             target="_blank"
           >
             <Icon
@@ -65,8 +55,7 @@ const Header = () => {
           </a>
           <a
             href="https://www.youtube.com/user/TheGovLab"
-            className="e-nav-item"
-            style={{ color: "white" }}
+            className="gvl-header-nav-item"
             target="_blank"
           >
             <Icon

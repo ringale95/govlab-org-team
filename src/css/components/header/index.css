@@ -1,16 +1,162 @@
-.header-container {
-    background-color: var(--gvl-bg-color-primary);
-    padding: 10px;
+.gvl-header {
     display: flex;
-    left: 0;
-    right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    justify-items: center;
+    background-color: var(--gvl-bg-color-primary);
 }
 
-.header-group {
+.gvl-header-group {
     display: flex;
-    width: 30%;
-    cursor: pointer;
+    align-items: center;
+}
 
+.gvl-header-search-form {
+    display: flex;
+    align-items: center;
+}
+
+.gvl-header-logo {
+    display: flex;
+    flex-direction: column;
+    /* Ensure logo is above search input and button */
+    align-items: center;
+    /* Center the logo */
+}
+
+.gvl-header-logo .logo {
+    cursor: pointer;
+}
+
+.gvl-header-search-input {
+    opacity: 1;
+    transition: all 0.4s ease;
+    padding: 4px 6px;
+    flex: 1;
+    margin-left: 10px;
+    max-height: 30px;
+    outline: none;
+    border: 0;
+    color: white;
+    background-color: rgba(var(--white-rgb), 0.1);
+}
+
+.gvl-header-search-input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.gvl-header-search-submit {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 4px 12px;
+}
+
+@media (min-width: 1024px) {
+    .gvl-header {
+        padding: 10px;
+    }
+
+    .gvl-header-search-form input {
+        max-width: 300px;
+        margin: 8px 0 22px;
+    }
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    line-height: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.gvl-header-site-button {
+    color: white;
+}
+
+.gvl-header-nav-item {
+    color: white;
+}
+
+.gvl-header-nav-item img {
+    padding: 10px 15px;
+}
+
+@media (max-width: 800px) {
+    .gvl-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .gvl-header-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gvl-header-group a {
+        display: none;
+        /* Hide navigation links */
+    }
+
+    .gvl-header-logo {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gvl-header-search-form {
+        display: flex;
+        flex-direction: row;
+        /* Ensure search icon and inputs are in a row */
+        align-items: center;
+        width: 100%;
+    }
+
+    .gvl-header-search-input {
+        width: calc(100% - 60px);
+        /* Adjust width based on space for the search icon */
+        margin-left: 0;
+    }
+
+    .gvl-header-search-submit {
+        margin: 0;
+    }
+}
+
+.gvl-header .logo img {
+    max-width: 100px;
+}
+
+@media (min-width: 1025px) {
+    .gvl-header .logo img {
+        max-width: 140px;
+    }
 }
