@@ -69,19 +69,23 @@ export const TeamMembersPage = () => {
     loadTeamMembers();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-
   return (
     <>
       <div onClick={() => setMenuActive(false)} className="main-container">
         <Header toggleMenu={toggleMenu} menuActive={menuActive} />
         <main>
-          <div className="team-member-container">
-            {teamMembers.map((member) => (
-              <TeamMemberCard key={member.id} {...member} />
-            ))}
-          </div>
+          {(loading || error) && (
+            <div className="loading-container">
+              <h1>{loading ? "Loading..." : error}</h1>
+            </div>
+          )}
+          {!loading && !error && (
+            <div className="team-member-container">
+              {teamMembers.map((member) => (
+                <TeamMemberCard key={member.id} {...member} />
+              ))}
+            </div>
+          )}
         </main>
         <Footer />
       </div>

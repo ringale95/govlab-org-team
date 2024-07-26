@@ -35,5 +35,12 @@ interface AvatarProps {
  */
 export const Avatar = ({ url, size, sx }: AvatarProps) => {
   const avatarClassName = AvatarSizes[size];
-  return <img className={avatarClassName} src={url} style={sx} alt="Avatar" />;
+  return (
+    <img
+      className={avatarClassName}
+      src={url ?? "src/assets/images/placeholder.png"}
+      style={sx}
+      alt="Avatar"
+    />
+  );
 };
