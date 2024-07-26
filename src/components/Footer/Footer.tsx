@@ -1,6 +1,10 @@
 import React from "react";
 import { Copyright } from "../Copyright/Copyright";
 
+/**
+ * Footer component that renders the footer section of the website.
+ * @returns {JSX.Element} The rendered footer component.
+ */
 export const Footer = () => {
   return (
     <>
@@ -25,6 +29,7 @@ export const Footer = () => {
               className="e-our-funders"
               href="/our-transparency"
               target="_blank"
+              rel="noopener noreferrer"
             >
               OUR FUNDERS
             </a>
@@ -35,6 +40,7 @@ export const Footer = () => {
               className="e-partner-logo burnes-logo"
               href="http://northeastern.edu"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="src/assets/images/neu.png"
@@ -46,6 +52,7 @@ export const Footer = () => {
               className="e-partner-logo"
               href="http://engineering.nyu.edu/tandon"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="src/assets/images/nyu.png"
