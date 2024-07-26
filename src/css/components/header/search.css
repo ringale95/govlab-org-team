@@ -1,7 +1,7 @@
 /* Container for the search form elements */
 .header-search-form {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* Search input styling */
@@ -20,15 +20,15 @@
 
 /* Focus state styling for search input */
 .header-search-input:focus {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(var(--white-rgb), 0.3);
 }
 
 /* Search submit button styling */
 .header-search-submit {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(var(--white-rgb), 0.2);
     border: 0;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--gvl-link-primary);
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;

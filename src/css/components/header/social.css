@@ -1,7 +1,7 @@
 /* Styling for site button */
 .header-site-button {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--gvl-link-primary);
+    background-color: rgba(var(--white-rgb), 0.2);
     padding: 5px;
     font-size: 12pt;
     font-weight: 600;

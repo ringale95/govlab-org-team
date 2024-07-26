@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 import {
   IconColor,
   IconColors,
@@ -16,6 +16,7 @@ interface IconProps {
   size: IconSize;
   color: IconColor;
   sx?: CSSProperties;
+  hoverable?: boolean;
   onHover?: (e: unknown) => void;
 }
 
@@ -26,12 +27,13 @@ interface IconProps {
  * @see {@link IconSize}
  */
 
-export const Icon = ({ name, size, color, onHover, sx }: IconProps) => {
+export const Icon = ({ name, size, color, sx, hoverable }: IconProps) => {
+  const [hover, setHover] = useState(false);
   const svgString = IconNames[name];
   const svgWithStyles = svgString
     .replace(/{{width}}/, IconSizes[size])
     .replace(/{{height}}/, IconSizes[size])
-    .replace(/{{color}}/, IconColors[color]);
+    .replace(/{{color}}/, hover && hoverable ? "#fff" : IconColors[color]);
 
   return (
     <div
@@ -41,7 +43,8 @@ export const Icon = ({ name, size, color, onHover, sx }: IconProps) => {
         verticalAlign: "text-top",
         ...sx,
       }}
-      onMouseOver={onHover}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       dangerouslySetInnerHTML={{ __html: svgWithStyles }}
     />
   );

@@ -35,6 +35,7 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
               name="menu"
               size="md"
               color="nav-icon-primary"
+              hoverable={true}
               sx={{ padding: "10px 15px" }}
             />
           </div>
@@ -43,6 +44,7 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
               name="search"
               size="md"
               color="nav-icon-primary"
+              hoverable={true}
               sx={{ padding: "10px 15px" }}
             />
             <input className="header-search-input" type="text" />
@@ -74,6 +76,7 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
               name="twitter"
               size="md"
               color="nav-icon-primary"
+              hoverable={true}
               sx={{ padding: "10px 15px" }}
             />
           </a>
@@ -86,6 +89,7 @@ const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
               name="youtube"
               size="md"
               color="nav-icon-primary"
+              hoverable={true}
               sx={{ padding: "10px 15px" }}
             />
           </a>
