@@ -12,14 +12,6 @@
     margin: 2px;
 }
 
-/* Interaction */
-/* .dropdown:hover {
-    transition: all .4s ease;
-    padding-right: 20px;
-    letter-spacing: 0.5px;
-    background-color: rgba(var(--black-rgb), 0.1);
-} */
-
 /* Children Classes */
 .dropdown>.dropdown-icon {
     margin-left: 15px;

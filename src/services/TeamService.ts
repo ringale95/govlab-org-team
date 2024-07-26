@@ -23,7 +23,7 @@ class TeamService {
             );
             const result = response.data.data.filter(member => (member.status === 'published' && member.slug !== "govlab"));
             console.log(result.length);
-            return result; // Ensure this matches the API response structure
+            return result; 
         } catch (error) {
             console.error('Error fetching team members:', error);
             throw error;
