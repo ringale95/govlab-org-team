@@ -1,14 +1,21 @@
 import _ from "lodash";
-import { useState, useEffect } from "react";
+import { useState, useEffect, MouseEventHandler } from "react";
 import Header from "../../components/Header/Header";
 import TeamMemberCard from "../../components/TeamMemberCard/TeamMemberCard";
 import { TeamMember } from "../../models/TeamMember";
 import TeamService from "../../services/TeamService";
+import { Footer } from "../../components/Footer/Footer";
 
 export const TeamMembersPage = () => {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenu: MouseEventHandler<HTMLDivElement> = (e) => {
+    e.stopPropagation();
+    setMenuActive(!menuActive);
+  };
 
   const loadTeamMembers = async () => {
     try {
@@ -47,11 +54,16 @@ export const TeamMembersPage = () => {
   if (error) return <p>{error}</p>;
   return (
     <>
-      <Header />
-      <div className="team-member-container">
-        {teamMembers.map((member) => (
-          <TeamMemberCard {...member} />
-        ))}
+      <div onClick={() => setMenuActive(false)} className="main-container">
+        <Header toggleMenu={toggleMenu} menuActive={menuActive} />
+        <main>
+          <div className="team-member-container">
+            {teamMembers.map((member) => (
+              <TeamMemberCard {...member} />
+            ))}
+          </div>
+        </main>
+        <Footer />
       </div>
     </>
   );

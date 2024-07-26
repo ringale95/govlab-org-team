@@ -1,16 +1,27 @@
+import { MouseEventHandler } from "react";
 import { Icon } from "../Icon/Icon";
 
-const Header = () => {
+interface HeaderProps {
+  menuActive: boolean;
+  toggleMenu: MouseEventHandler<HTMLDivElement>;
+}
+
+const Header = ({ menuActive, toggleMenu }: HeaderProps) => {
   return (
     <>
       <header className="gvl-header">
         <div className="gvl-header-group">
-          <Icon
-            name="menu"
-            size="md"
-            color="nav-icon-primary"
-            sx={{ padding: "10px 15px" }}
-          />
+          <div
+            className="e-nav-item js-nav-trigger e-nav-trigger"
+            onClick={toggleMenu}
+          >
+            <Icon
+              name="menu"
+              size="md"
+              color="nav-icon-primary"
+              sx={{ padding: "10px 15px" }}
+            />
+          </div>
           <div className="gvl-header-search-form gvl-header-search-trigger">
             <Icon
               name="search"
@@ -18,7 +29,6 @@ const Header = () => {
               color="nav-icon-primary"
               sx={{ padding: "10px 15px" }}
             />
-
             <input className="gvl-header-search-input" type="text" />
             <input
               className="gvl-header-search-submit"
@@ -27,7 +37,6 @@ const Header = () => {
             />
           </div>
         </div>
-
         <div className="gvl-header-logo logo">
           <a href="./">
             <img
@@ -36,7 +45,6 @@ const Header = () => {
             />
           </a>
         </div>
-
         <div className="gvl-header-group">
           <a className="gvl-header-site-button" href="/our-sites">
             OUR SITES
@@ -67,6 +75,18 @@ const Header = () => {
           </a>
         </div>
       </header>
+      <nav className={`b-main-menu ${menuActive ? "m-active" : ""}`}>
+        <a href="./">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/events">Events</a>
+        <a href="/publications">Publications</a>
+        <a href="/team">Team</a>
+        <a href="/global-advisory-council">Global Advisory Council</a>
+        <a href="/our-transparency">Our Transparency</a>
+        <a href="/job-board">Job Board</a>
+        <a href="/contact">Contact</a>
+      </nav>
     </>
   );
 };

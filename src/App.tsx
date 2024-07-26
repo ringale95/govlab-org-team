@@ -1,13 +1,8 @@
-import Header from "./components/Header/Header";
 import "./css/index.css";
+import { TeamMembersPage } from "./pages/TeamMembers/TeamMembersPage";
 
 function App() {
-  return (
-    <>
-      <Header />
-      {/* <Icon name="logo" size="xl" color="icon-secondary" /> */}
-    </>
-  );
+  return <TeamMembersPage />;
 }
 
 export default App;

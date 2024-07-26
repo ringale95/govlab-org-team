@@ -1,6 +1,5 @@
 .gvl-header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -15,14 +14,11 @@
 .gvl-header-search-form {
     display: flex;
     align-items: center;
-
 }
 
 .gvl-header-logo {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     margin-right: 12%;
+    /* Adjust spacing as needed */
 }
 
 .gvl-header-logo .logo {
@@ -93,10 +89,7 @@ textarea {
     margin: 0;
 }
 
-.gvl-header-site-button {
-    color: white;
-}
-
+.gvl-header-site-button,
 .gvl-header-nav-item {
     color: white;
 }
@@ -113,10 +106,9 @@ textarea {
     }
 
     .gvl-header-group {
-        display: flex;
-        justify-content: space-between;
         width: 100%;
         margin-bottom: 10px;
+        justify-content: space-between;
     }
 
     .gvl-header-group a {
@@ -152,8 +144,60 @@ textarea {
     max-width: 140px;
 }
 
-@media (min-width: 1025px) {
-    .gvl-header .logo img {
-        max-width: 140px;
+/* Default menu style (for small screens) */
+.b-main-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    cursor: pointer;
+    height: 100%;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+}
+
+.b-main-menu a {
+    display: block;
+    padding: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+
+}
+
+.b-main-menu.m-active {
+    left: 0;
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    .b-main-menu {
+        display: block;
+        font-size: 18px;
+        padding: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .b-main-menu a {
+        text-align: right;
+    }
+}
+
+@media (max-width: 800px) {
+    .b-main-menu {
+        width: 80%;
+        transition: left 0.3s ease-in-out;
+
     }
 }
