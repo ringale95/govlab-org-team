@@ -33,9 +33,6 @@ git clone https://github.com/ringale95/govlab-org-team.git
   npm run build
   ```
 
-Here’s an updated version of your README that incorporates the additional information about the `components` and `container` folders:
-
----
 
 ## Styling Foundations
 
@@ -69,10 +66,6 @@ In addition to global styles, specific styles for individual components and cont
 
 By organizing styles in this manner, we ensure a modular and maintainable approach to styling, with clear separation between global styles and component-specific styles.
 
-Here’s how you can include the updated information about the components in your README:
-
----
-
 ## Reusable Components
 
 While recreating the team members page, several key visual components were identified, including Avatar, Text, Icon, Dropdown, and TeamCard. To streamline development and ensure consistency across the website, these components were implemented as reusable, standalone elements with dynamic inputs. This approach enhances maintainability and facilitates the integration of these components throughout the site.
@@ -86,4 +79,3 @@ While recreating the team members page, several key visual components were ident
 - **Text Component:** The `Text` component is a versatile and reusable element that supports different variants, HTML tags, colors, and optional links.
 
 Additionally, JSDoc comments have been integrated across all React components wherever possible, enhancing IntelliSense and improving the overall development experience.
-
